@@ -13,7 +13,15 @@ export class NavbarComponent implements OnInit {
   }
 
   openFullScreen() {
-    console.log('Acionado a tela cheia');
+    let i = document.documentElement;
+    let t = window.document;
+
+    if (!i.requestFullscreen()) {
+      i.requestFullscreen();
+    } else {
+      t.exitFullscreen();
+    }
   }
+
 
 }
