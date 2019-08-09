@@ -54,6 +54,8 @@
     font-weight: bold;
     font-size: 14px;
     border-radius: 28px;
+    border-top: 0px;
+    border-bottom: 0px;
     border-left: 0px;
     border-right: 0px;
     /* background-image: linear-gradient(left, #1DCEE0, #1CECB8); */
