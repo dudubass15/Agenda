@@ -1,20 +1,30 @@
 .divsearch {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 50px;
+    margin-bottom: 0px;
+    scroll-margin: 0px;
 }
 
 .divsearch .div-search {
-    width: 50%;
+    width: 80%;
     height: 40px;
     /* background-color: blue; */
+    margin: auto;
 }
 .input-search {
-    width: 350px;
-    height: 30px;
-    border: 0.5px solid #031888;
+    width: 100%;
+    height: 40px;
+    /* border: 0.5px solid #031888; */
+    border: 2px solid rgb(225, 228, 235);
     border-radius: 8px;
+    margin: auto;
     margin-right: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
 }
+
 .button-submit {
     width: 100px;
     height: 30px;
