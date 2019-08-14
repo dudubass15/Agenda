@@ -1,6 +1,6 @@
-<div class="d-flex flex-row-reverse bd-highlight align-items-center divsearch">
+<div class="d-flex flex-row-reverse bd-highlight align-items-center divsearch" [formGroup]="formulario">
     <div class="d-flex justify-content-end align-items-center div-search">
-        <input type="search" class="input-search" placeholder="Faça a sua pesquisa ..." autocomplete="false"/>
-        <!-- <button type="submit" class="button-submit">Pesquisar</button> -->
+        <input type="search" class="input-search" formControlName="texto" placeholder="Faça a sua pesquisa ..." autocomplete="false"/><br>
+        <button type="submit" class="button-submit" (click)="onSubmit()">Pesquisar</button>
     </div>
 </div>
