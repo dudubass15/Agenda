@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { SearchComponent } from './search/search.component';
 import { FormCommitmentComponent } from './form-commitment/form-commitment.component';
+import { InfoAppComponent } from './utilidades/modais/info-app/info-app.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormCommitmentComponent } from './form-commitment/form-commitment.compo
     FooterComponent,
     CardsComponent,
     SearchComponent,
-    FormCommitmentComponent
+    FormCommitmentComponent,
+    InfoAppComponent
   ],
   imports: [
     BrowserModule,

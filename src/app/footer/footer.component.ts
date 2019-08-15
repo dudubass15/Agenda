@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  modal() {
+    alert('Chamou o modal !');
+  }
+
 }
