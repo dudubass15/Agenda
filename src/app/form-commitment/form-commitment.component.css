@@ -1,0 +1,83 @@
+.card-body {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 2rem;
+}
+.bg-green {
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.884);
+    box-shadow: 
+                0px 0px 0px rgba(0,0,0,0.4), 
+                0px 0px 2px rgba(0,0,0,0.1), 
+                0px 6px 10px rgba(0,0,0,0.1);
+}
+.card-header {
+    display: flex;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.font-title {
+    font-size: 24px;
+    font-family: 'Grenze', serif;
+    font-weight: 700;
+}
+.font-title .div-icon {
+    width: 30px;
+}
+.font-title .div-icon .icon-agenda {
+    line-height: unset;
+}
+.card-default {
+    color: rgb(0, 0, 0);
+    font-family: 'Grenze', serif;
+}
+.input-search {
+    width: 100%;
+    height: 40px;
+    border: 2px solid rgb(225, 228, 235);
+    border-radius: 8px;
+    margin: auto;
+    margin-right: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.input-search:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.button-submit {
+    width: 120px;
+    height: 35px;
+    /* color: #ffffff; */
+    color: rgb(0, 0, 0);
+    font-family: 'Grenze', serif;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 8px;
+    background-color: rgb(225, 228, 235);
+    box-shadow: 
+                0px 0px 0px rgba(0,0,0,0.4), 
+                0px 0px 1.5px rgba(0,0,0,0.1), 
+                0px 6px 3px rgba(0,0,0,0.1);
+}
+.button-submit:hover {
+    width: 120px;
+    height: 35px;
+    color: rgb(0, 0, 0);
+    font-family: 'Grenze', serif;
+    font-weight: bold;
+    border: 0.3px solid rgba(0, 0, 0, 0.199);
+    border-radius: 8px;
+    background-color: rgb(225, 228, 235);
+    box-shadow: 
+                0px 0px 0px rgba(0,0,0,0.4), 
+                0px 0px 3px rgba(0,0,0,0.1), 
+                0px 6px 15px rgba(0,0,0,0.1);
+}
+.button-submit:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}

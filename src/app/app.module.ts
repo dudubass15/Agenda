@@ -9,6 +9,7 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { SearchComponent } from './search/search.component';
+import { FormCommitmentComponent } from './form-commitment/form-commitment.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SearchComponent } from './search/search.component';
     BodyComponent,
     FooterComponent,
     CardsComponent,
-    SearchComponent
+    SearchComponent,
+    FormCommitmentComponent
   ],
   imports: [
     BrowserModule,
