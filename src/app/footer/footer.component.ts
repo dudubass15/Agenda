@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ModalService } from '../utilidades/services/modal.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,13 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  teste: any;
+
+  constructor(private modalService: ModalService) { }
 
   ngOnInit() {
+    this.teste = {
+      nome: 'Carlos Eduardo',
+      sobrenome: 'Oliveira'
+    };
   }
 
-  modal() {
-    alert('Chamou o modal !');
+  openModal() {
+    // this.startModal.emit({ console: this.teste });
+    this.modalService.recebeEventModal(event);
   }
 
 }

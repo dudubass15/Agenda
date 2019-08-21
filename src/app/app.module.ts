@@ -11,6 +11,7 @@ import { CardsComponent } from './cards/cards.component';
 import { SearchComponent } from './search/search.component';
 import { FormCommitmentComponent } from './form-commitment/form-commitment.component';
 import { InfoAppComponent } from './utilidades/modais/info-app/info-app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { InfoAppComponent } from './utilidades/modais/info-app/info-app.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
