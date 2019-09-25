@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompromissosService } from '../services/http/compromissos.service';
 
 @Component({
   selector: 'app-cards',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  listaCompromissos: any;
+
+  constructor(private compromissoService: CompromissosService) { }
 
   ngOnInit() {
+    this.compromissoService.getCompromissos().then(c => {
+      console.log(c)
+    });
   }
 
 }

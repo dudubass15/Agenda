@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { FormCommitmentComponent } from './form-commitment/form-commitment.component';
 import { InfoAppComponent } from './utilidades/modais/info-app/info-app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

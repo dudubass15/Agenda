@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TesteService } from '../services/http/teste.service';
 
 @Component({
   selector: 'app-form-commitment',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormCommitmentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testeService: TesteService) { }
 
   ngOnInit() {
+    this.testeService.buscarNome();
   }
 
 }

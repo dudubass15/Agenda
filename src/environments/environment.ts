@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  ambiente: 'desenvolvimento',
+  webserviceURL: 'http://localhost/webserviceAgenda/',
 };
 
 /*
