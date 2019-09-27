@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TesteService } from '../services/http/teste.service';
+import { Routes, Router } from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
+import { CompromissosService } from '../services/http/compromissos.service';
 
 @Component({
   selector: 'app-form-commitment',
@@ -8,10 +10,35 @@ import { TesteService } from '../services/http/teste.service';
 })
 export class FormCommitmentComponent implements OnInit {
 
-  constructor(private testeService: TesteService) { }
+  form = new FormGroup({
+    titulo: new FormControl(''),
+    dataInicio: new FormControl(''),
+    dataFim: new FormControl(''),
+    descricao: new FormControl(''),
+    horaInicio: new FormControl(''),
+    horaFim: new FormControl('')
+  });
+
+  constructor(private compromissoService: CompromissosService, private router: Router) { }
 
   ngOnInit() {
-    this.testeService.buscarNome();
+  }
+
+  sendForm() {
+
+    let dados = {
+      titulo: this.form.controls.titulo.value,
+      dataInicio: this.form.controls.dataInicio.value,
+      dataFim: this.form.controls.dataFim.value,
+      descricao: this.form.controls.descricao.value,
+      horaInicio: this.form.controls.horaInicio.value,
+      horaFim: this.form.controls.horaFim.value,
+    };
+
+    this.compromissoService.adicionarCompromisso(dados).then( e => {
+      this.router.navigate(['home']);
+    });
+    
   }
 
 }

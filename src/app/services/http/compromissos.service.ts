@@ -12,4 +12,8 @@ export class CompromissosService {
   getCompromissos() {
     return this.http.get(environment.webserviceURL + 'compromissos/').toPromise();
   }
+
+  adicionarCompromisso(dados) {
+    return this.http.post(environment.webserviceURL + 'compromissos/addCompromisso', dados).toPromise();
+  }
 }

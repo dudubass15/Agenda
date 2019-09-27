@@ -1,73 +1,42 @@
 <div class="row">
 
-    <div class="col-md-3">
+    <div class="col-md-3" *ngFor="let i of listaCompromissos">
         <div class="card text-white bg-green mb-4">
             <div class="card-body card-default">
-                <h5 class="card-title">Anotação 01</h5>
-                <p class="card-text text-justify">Some quick example text to build on the card title and make up the
-                    bulk of the card's
-                    content.</p>
-                <div class="card-footer text-muted text-center">
-                    <a href="#" class="btn btn-degrader btn-sm">Concluído</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                <h5 class="card-title">{{ i.titulo }}</h5>
+                <!-- <p class="card-text text-left">
+                    <b class="subtitulo">Data:</b> {{ i.data_inicio | date: 'dd-MM-yyyy' }}<br>
+                    <b class="subtitulo">Hora:</b> {{ i.hora_inicio }}<br>
+                    <b class="subtitulo">Local:</b> Teste<br>
+                </p> -->
+                <!-- <p class="card-text text-justify">{{ i.descricao }}</p> -->
 
-    <div class="col-md-3">
-        <div class="card text-white bg-green mb-4">
-            <div class="card-body card-default">
-                <h5 class="card-title">Anotação 02</h5>
-                <p class="card-text text-justify">Some quick example text to build on the card title and make up the
-                    bulk of the card's
-                    content.</p>
-                <div class="card-footer text-muted text-center">
-                    <a href="#" class="btn btn-degrader btn-sm">Concluído</a>
+                <div class="row justify-content-between">
+                    <div class="col text-left">
+                        <b class="subtitulo">Data:</b>
+                    </div>
+                    <div class="col text-right">
+                        {{ i.data_inicio | date: 'dd-MM-yyyy' }}
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card text-white bg-green mb-4">
-            <div class="card-body card-default">
-                <h5 class="card-title">Anotação 01</h5>
-                <p class="card-text text-justify">Some quick example text to build on the card title and make up the
-                    bulk of
-                    the card's
-                    content.</p>
-                <div class="card-footer text-muted text-center">
-                    <a href="#" class="btn btn-degrader btn-sm">Concluído</a>
+                <div class="row justify-content-between">
+                    <div class="col text-left">
+                        <b class="subtitulo">Hora:</b>
+                    </div>
+                    <div class="col text-right">
+                        {{ i.hora_inicio }}
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card text-white bg-green mb-4">
-            <div class="card-body card-default">
-                <h5 class="card-title">Anotação 01</h5>
-                <p class="card-text text-justify">Some quick example text to build on the card title and make up the
-                    bulk of
-                    the card's
-                    content.</p>
-                <div class="card-footer text-muted text-center">
-                    <a href="#" class="btn btn-degrader btn-sm">Concluído</a>
+                <div class="row justify-content-between">
+                    <div class="col text-left">
+                        <b class="subtitulo">Local:</b>
+                    </div>
+                    <div class="col text-right">
+                        Teste
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card text-white bg-green mb-4">
-            <div class="card-body card-default">
-                <h5 class="card-title">Anotação 01</h5>
-                <p class="card-text text-justify">Some quick example text to build on the card title and make up the
-                    bulk of
-                    the card's
-                    content.</p>
                 <div class="card-footer text-muted text-center">
-                    <a href="#" class="btn btn-degrader btn-sm">Concluído</a>
+                    <a href="#" class="btn btn-degrader btn-sm">Visualizar</a>
                 </div>
             </div>
         </div>

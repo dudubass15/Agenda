@@ -9,34 +9,34 @@
     <div class="card-body card-default">
         <div class="form-group">
             <label for="formGroupExampleInput">Título</label>
-            <input type="text" class="form-control input-search" autocomplete="false">
+            <input type="text" [formControl]="form.controls.titulo" class="form-control input-search" autocomplete="false">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="dtInicio">Data Início</label>
-                <input type="date" id="dtInicio" class="form-control input-search" autocomplete="false">
+                <input type="date" [formControl]="form.controls.dataInicio" id="dtInicio" class="form-control input-search" autocomplete="false">
             </div>
             <div class="form-group col-md-6">
                 <label for="dtTermino">Data Término</label>
-                <input type="date" id="dtTermino" class="form-control input-search" autocomplete="false">
+                <input type="date" [formControl]="form.controls.dataFim" id="dtTermino" class="form-control input-search" autocomplete="false">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="hrInicio">Hora Início</label>
-                <input type="time" class="form-control input-search" autocomplete="false">
+                <input type="time" [formControl]="form.controls.horaInicio" class="form-control input-search" autocomplete="false">
             </div>
             <div class="form-group col-md-6">
                 <label for="hrTermino">Hora Término</label>
-                <input type="time" class="form-control input-search" autocomplete="false">
+                <input type="time" [formControl]="form.controls.horaFim" class="form-control input-search" autocomplete="false">
             </div>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput">Descrição</label>
-            <textarea class="form-control input-search" id="exampleFormControlTextarea1" rows="10" autocomplete="false"></textarea>
+            <textarea class="form-control input-search" [formControl]="form.controls.descricao" id="exampleFormControlTextarea1" rows="10" autocomplete="false"></textarea>
         </div><br>
         <div class="form-group text-center">
-            <button type="submit" class="button-submit">Salvar</button>
+            <button type="submit" (click)="sendForm()" class="button-submit">Salvar</button>
         </div>
     </div>
 </div>

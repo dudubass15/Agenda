@@ -13,9 +13,7 @@ export class CardsComponent implements OnInit {
   constructor(private compromissoService: CompromissosService) { }
 
   ngOnInit() {
-    this.compromissoService.getCompromissos().then(c => {
-      console.log(c)
-    });
+    this.compromissoService.getCompromissos().then(c => console.log(this.listaCompromissos = c) );
   }
 
 }
