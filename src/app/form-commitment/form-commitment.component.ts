@@ -14,6 +14,7 @@ export class FormCommitmentComponent implements OnInit {
     titulo: new FormControl(''),
     dataInicio: new FormControl(''),
     dataFim: new FormControl(''),
+    local: new FormControl(''),
     descricao: new FormControl(''),
     horaInicio: new FormControl(''),
     horaFim: new FormControl('')
@@ -30,6 +31,7 @@ export class FormCommitmentComponent implements OnInit {
       titulo: this.form.controls.titulo.value,
       dataInicio: this.form.controls.dataInicio.value,
       dataFim: this.form.controls.dataFim.value,
+      local: this.form.controls.local.value,
       descricao: this.form.controls.descricao.value,
       horaInicio: this.form.controls.horaInicio.value,
       horaFim: this.form.controls.horaFim.value,

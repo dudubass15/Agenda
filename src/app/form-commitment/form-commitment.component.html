@@ -32,8 +32,12 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="formGroupExampleInput">Local</label>
+            <input type="text" class="form-control input-search" [formControl]="form.controls.local" autocomplete="false">
+        </div>
+        <div class="form-group">
             <label for="formGroupExampleInput">Descrição</label>
-            <textarea class="form-control input-search" [formControl]="form.controls.descricao" id="exampleFormControlTextarea1" rows="10" autocomplete="false"></textarea>
+            <textarea class="form-control input-search" [formControl]="form.controls.descricao" id="exampleFormControlTextarea1" rows="23" autocomplete="false"></textarea>
         </div><br>
         <div class="form-group text-center">
             <button type="submit" (click)="sendForm()" class="button-submit">Salvar</button>

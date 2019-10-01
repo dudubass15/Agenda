@@ -6,7 +6,7 @@ export const environment = {
   production: true,
   ambiente: 'desenvolvimento',
   webserviceURL: 'http://localhost/webserviceAgenda/',
-  // webserviceURL: 'https://',
+  // webserviceURL: 'https://sistemaskadu.com.br/webserviceAgenda/',
 };
 
 /*

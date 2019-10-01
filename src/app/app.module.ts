@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './users/login/login.component';
+import { VisualizarCardComponent } from './cards/visualizar-card/visualizar-card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoginComponent } from './users/login/login.component';
     FormCommitmentComponent,
     InfoAppComponent,
     UsersComponent,
-    LoginComponent
+    LoginComponent,
+    VisualizarCardComponent
   ],
   imports: [
     BrowserModule,
