@@ -5,6 +5,7 @@ import { BodyComponent } from './body/body.component';
 import { SearchComponent } from './search/search.component';
 import { FormCommitmentComponent } from './form-commitment/form-commitment.component';
 import { InfoAppComponent } from './utilidades/modais/info-app/info-app.component';
+import { LoginComponent } from './users/login/login.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,9 @@ const routes: Routes = [
   },
   {
     path: 'modal', component: InfoAppComponent
+  },
+  {
+    path: 'login', component: LoginComponent
   }
 ];
 

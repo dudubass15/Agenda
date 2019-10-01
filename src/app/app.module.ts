@@ -13,6 +13,8 @@ import { FormCommitmentComponent } from './form-commitment/form-commitment.compo
 import { InfoAppComponent } from './utilidades/modais/info-app/info-app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { LoginComponent } from './users/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     CardsComponent,
     SearchComponent,
     FormCommitmentComponent,
-    InfoAppComponent
+    InfoAppComponent,
+    UsersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

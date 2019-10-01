@@ -1,0 +1,92 @@
+.container {
+    width: 100%;
+    max-width: 80%;
+}
+.dv-login {
+    width: 50%;
+    margin: auto;
+    background-color: #2F3146;
+    color: #FFFFFF;
+    border: 0px;
+    top: 6rem;
+}
+.dv-login .card-default {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    width: 90%;
+    margin: auto;
+}
+.dv-texto-card {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Texto Card */
+.card-title {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Label */
+.labelDefault {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+}
+
+/* Inputs */
+.inputDefault {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border: 1px solid #419D84;
+    border-radius: 0.45rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.inputDefault:focus, textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    border: 2px solid #419D84;
+}
+
+/* Div botão de login */
+.div-button-login {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Botão de login */
+.btn-login {
+    color: #fff;
+    background-color: #07C568;
+    border-color: #07C568;
+    width: 140px;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 2.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-login:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}

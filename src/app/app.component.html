@@ -1,10 +1,14 @@
-<app-navbar></app-navbar><br>
+<ng-container>
+    
+    <app-navbar></app-navbar><br>
 
-<div class="wrapper-default">
-    <div class="container">
-        <router-outlet></router-outlet>
+    <div class="wrapper-default">
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="push"></div>
     </div>
-    <div class="push"></div>
-</div>
 
-<app-footer></app-footer>
+    <app-footer></app-footer>
+
+</ng-container>
