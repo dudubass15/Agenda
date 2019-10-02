@@ -21,12 +21,11 @@ export class VisualizarCardComponent implements OnInit {
 
   getCompromisso(params) {
     let dados = {
-      id: params
+      id: parseInt(params.id)
     }
-    // this.compromissoService.buscarCompromisso(dados).then( c => {
-    //   this.registros = c,
-    //   console.log(this.registros);
-    // });
+    this.compromissoService.buscarCompromisso(dados).then( c => {
+      this.registros = c['registros']
+    });
   }
 
 }

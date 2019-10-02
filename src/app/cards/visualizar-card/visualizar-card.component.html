@@ -1,1 +1,17 @@
-<p>visualizar-card works!</p>
+<div class="jumbotron jumbotron-fluid dv-jumbotron">
+    <div class="container">
+        <h1 class="display-4">{{ registros.titulo }}</h1><br>
+        <h5 class="display-5">Resumo:</h5>
+        <p class="lead">
+            Compromisso marcado para o dia {{ registros.data_inicio | date: 'dd-MM-yyyy' }} ao dia {{ registros.data_fim | date: 'dd-MM-yyyy' }}, com inicio previsto
+            às {{ registros.hora_inicio }}.
+        </p><br>
+
+        <h5 class="display-5">Local:</h5>
+        <p class="lead">
+            {{ registros.local || 'Não informado' }}.
+        </p>
+    </div>
+</div>
+
+<!-- <div class="dv-actions p-4">tes</div> -->

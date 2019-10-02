@@ -18,6 +18,6 @@ export class CompromissosService {
   }
 
   buscarCompromisso(dados) {
-    return this.http.post(environment.webserviceURL + 'compromissos/buscarCompromisso', dados).toPromise();
+    return this.http.post(environment.webserviceURL + 'compromissos/getCompromisso', dados).toPromise();
   }
 }
