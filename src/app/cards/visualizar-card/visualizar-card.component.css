@@ -1,6 +1,7 @@
 .dv-jumbotron {
     background-color: #ffffff !important;
     /* background-color: #db6464 !important; */
+    margin-bottom: 0rem;
 }
 /* .dv-jumbotron .dv-actions {
     display: flex;

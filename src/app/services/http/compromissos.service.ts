@@ -20,4 +20,8 @@ export class CompromissosService {
   buscarCompromisso(dados) {
     return this.http.post(environment.webserviceURL + 'compromissos/getCompromisso', dados).toPromise();
   }
+
+  arquivarCompromisso(dados) {
+    return this.http.post(environment.webserviceURL + 'compromissos/arquivaCompromisso', dados).toPromise();
+  }
 }

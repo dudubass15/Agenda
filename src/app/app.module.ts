@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './users/login/login.component';
 import { VisualizarCardComponent } from './cards/visualizar-card/visualizar-card.component';
+import { ButtonCardArquivarComponent } from './cards/visualizar-card/button-card-arquivar/button-card-arquivar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { VisualizarCardComponent } from './cards/visualizar-card/visualizar-card
     InfoAppComponent,
     UsersComponent,
     LoginComponent,
-    VisualizarCardComponent
+    VisualizarCardComponent,
+    ButtonCardArquivarComponent
   ],
   imports: [
     BrowserModule,
