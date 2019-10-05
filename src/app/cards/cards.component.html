@@ -1,38 +1,48 @@
 <div class="row">
 
-    <div class="col-md-3" *ngFor="let i of listaCompromissos">
-        <div class="card text-white bg-green mb-4">
-            <div class="card-body card-default">
-                <h5 class="card-title">{{ i.titulo }}</h5>
-                <div class="row justify-content-between">
-                    <div class="col text-left">
-                        <b class="subtitulo">Data:</b>
+    <ng-container *ngIf="listaCompromissos != 0 && listaCompromissos != null">
+        <div class="col-md-3" *ngFor="let i of listaCompromissos">
+            <div class="card text-white bg-green mb-4">
+                <div class="card-body card-default">
+                    <h5 class="card-title">{{ i.titulo }}</h5>
+                    <div class="row justify-content-between">
+                        <div class="col text-left">
+                            <b class="subtitulo">Data:</b>
+                        </div>
+                        <div class="col text-right">
+                            {{ i.data_inicio | date: 'dd-MM-yyyy' }}
+                        </div>
                     </div>
-                    <div class="col text-right">
-                        {{ i.data_inicio | date: 'dd-MM-yyyy' }}
+                    <div class="row justify-content-between">
+                        <div class="col text-left">
+                            <b class="subtitulo">Hora:</b>
+                        </div>
+                        <div class="col text-right">
+                            {{ i.hora_inicio }}
+                        </div>
                     </div>
-                </div>
-                <div class="row justify-content-between">
-                    <div class="col text-left">
-                        <b class="subtitulo">Hora:</b>
+                    <div class="row justify-content-between">
+                        <div class="col text-left">
+                            <b class="subtitulo">Local:</b>
+                        </div>
+                        <div class="col text-right">
+                            {{ i.local }}
+                        </div>
                     </div>
-                    <div class="col text-right">
-                        {{ i.hora_inicio }}
+                    <div class="card-footer text-muted text-center">
+                        <a [routerLink]="['../compromisso/visualizar', i.id ]" class="btn btn-degrader btn-sm">Visualizar</a>
                     </div>
-                </div>
-                <div class="row justify-content-between">
-                    <div class="col text-left">
-                        <b class="subtitulo">Local:</b>
-                    </div>
-                    <div class="col text-right">
-                        {{ i.local }}
-                    </div>
-                </div>
-                <div class="card-footer text-muted text-center">
-                    <a [routerLink]="['../compromisso/visualizar', i.id ]" class="btn btn-degrader btn-sm">Visualizar</a>
                 </div>
             </div>
         </div>
-    </div>
+    </ng-container>
+
+    <ng-container *ngIf="listaCompromissos == 0 || listaCompromissos == null">
+        <div class="alert alert-light col-12" role="alert">
+            <h3 class="display-4 p-5 text-center">
+                Nenhum compromisso marcado para os próximos dias!
+            </h3>
+        </div>
+    </ng-container>
 
 </div>

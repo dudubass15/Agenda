@@ -16,7 +16,7 @@ export class AuthService {
 
   fazerLogin(dados) {
     return this.http.post(environment.webserviceURL + 'user/login', dados).toPromise().then( r => {
-      if(r.login === true) {
+      if(r['login'] === true) {
 
         this.usuarioAutenticado = true;
         this.mostrarMenuEmitter.emit(true);
@@ -29,5 +29,9 @@ export class AuthService {
 
       }
     });
+  }
+
+  userAutenticado() {
+    return this.usuarioAutenticado;
   }
 }

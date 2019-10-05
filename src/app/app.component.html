@@ -1,6 +1,6 @@
 <ng-container>
     
-    <app-navbar></app-navbar><br>
+    <app-navbar *ngIf="mostrarMenu"></app-navbar><br>
 
     <div class="wrapper-default">
         <div class="container">
@@ -9,6 +9,6 @@
         <div class="push"></div>
     </div>
 
-    <app-footer></app-footer>
+    <app-footer *ngIf="mostrarMenu"></app-footer>
 
 </ng-container>

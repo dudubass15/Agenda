@@ -17,6 +17,9 @@ import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './users/login/login.component';
 import { VisualizarCardComponent } from './cards/visualizar-card/visualizar-card.component';
 import { ButtonCardArquivarComponent } from './cards/visualizar-card/button-card-arquivar/button-card-arquivar.component';
+import { AuthService } from './services/http/auth.service';
+import { AuthGuard } from './guards/auth.guard';
+import { Page404Component } from './errors/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { ButtonCardArquivarComponent } from './cards/visualizar-card/button-card
     UsersComponent,
     LoginComponent,
     VisualizarCardComponent,
-    ButtonCardArquivarComponent
+    ButtonCardArquivarComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,10 @@ import { ButtonCardArquivarComponent } from './cards/visualizar-card/button-card
     NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

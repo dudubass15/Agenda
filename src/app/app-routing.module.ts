@@ -7,29 +7,46 @@ import { FormCommitmentComponent } from './form-commitment/form-commitment.compo
 import { InfoAppComponent } from './utilidades/modais/info-app/info-app.component';
 import { LoginComponent } from './users/login/login.component';
 import { VisualizarCardComponent } from './cards/visualizar-card/visualizar-card.component';
+import { AuthGuard } from './guards/auth.guard';
+import { Page404Component } from './errors/page404/page404.component';
 
 
 const routes: Routes = [
   {
-    path: '', component: BodyComponent
+    path: '',
+    canActivate: [AuthGuard],
+    component: BodyComponent
   },
   {
-    path: 'home', component: BodyComponent
+    path: 'home',
+    canActivate: [AuthGuard],
+    component: BodyComponent
   },
   {
-    path: 'search', component: SearchComponent
+    path: 'search',
+    canActivate: [AuthGuard],
+    component: SearchComponent
   },
   {
-    path: 'add', component: FormCommitmentComponent
+    path: 'add',
+    canActivate: [AuthGuard],
+    component: FormCommitmentComponent
   },
   {
-    path: 'modal', component: InfoAppComponent
+    path: 'modal',
+    canActivate: [AuthGuard],
+    component: InfoAppComponent
   },
   {
     path: 'login', component: LoginComponent
   },
   {
-    path: 'compromisso/visualizar/:id', component: VisualizarCardComponent
+    path: 'compromisso/visualizar/:id',
+    canActivate: [AuthGuard],
+    component: VisualizarCardComponent
+  },
+  {
+    path: '**', component: Page404Component
   }
 ];
 
