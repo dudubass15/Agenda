@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
     this.usuarioObj = new Usuario();
     this.usuarioObj.usuario = this.form.controls.usuario.value;
     this.usuarioObj.senha = this.form.controls.senha.value;
-
     this.authService.fazerLogin(this.usuarioObj);
   }
 

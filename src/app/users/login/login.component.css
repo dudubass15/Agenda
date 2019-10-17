@@ -3,7 +3,7 @@
     max-width: 80%;
 }
 .dv-login {
-    width: 50%;
+    max-width: 50%;
     margin: auto;
     background-color: #2F3146;
     color: #FFFFFF;
@@ -89,4 +89,52 @@
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+@media only screen and (min-width: 318px) and (max-width: 419px) {
+    .container {
+        width: 100%;
+    }
+    .dv-login {
+        max-width: 100%;
+        /* margin: auto; */
+        background-color: #2F3146;
+        color: #FFFFFF;
+        border: 0px;
+        top: 6rem;
+    }
+    .dv-login .card-default {
+        flex: 1 1 auto;
+        /* padding: 1.25rem; */
+        width: 100%;
+        margin: auto;
+    }
+    .dv-texto-card {
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 770px) {
+    .container {
+        width: 100%;
+    }
+    .dv-login {
+        max-width: 90%;
+        margin: auto;
+        background-color: #2F3146;
+        color: #FFFFFF;
+        border: 0px;
+        top: 6rem;
+    }
+    .dv-login .card-default {
+        flex: 1 1 auto;
+        padding: 1.25rem;
+        width: 100%;
+        margin: auto;
+    }
+    .dv-texto-card {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
 }

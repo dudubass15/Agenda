@@ -11,6 +11,7 @@ export class AuthService {
   private usuarioAutenticado: boolean = false;
 
   mostrarMenuEmitter = new EventEmitter<boolean>();
+  localStorage: any;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -18,8 +19,8 @@ export class AuthService {
     return this.http.post(environment.webserviceURL + 'user/login', dados).toPromise().then( r => {
       if(r['login'] === true) {
 
-        this.usuarioAutenticado = true;
-        this.mostrarMenuEmitter.emit(true);
+        sessionStorage.setItem('user', <any>true);
+        this.userAutenticado();
         this.router.navigate(['home']);
 
       }else {
@@ -32,6 +33,14 @@ export class AuthService {
   }
 
   userAutenticado() {
+    this.localStorage = sessionStorage.getItem('user');
+    this.usuarioAutenticado = this.localStorage;
+    this.mostrarMenuEmitter.emit(this.usuarioAutenticado);
     return this.usuarioAutenticado;
+  }
+
+  userLogout() {
+    sessionStorage.clear();
+    this.mostrarMenuEmitter.emit(false);
   }
 }
